@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Login form </title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" scr="login form/main.js" charset="utf-8" >
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <img src="images/wave.png" class="wave">
+    <div class="container">
+      <div class="img">
+        <img src="images/bg.svg" >
+      </div>
+      <div class="login-container">
+        <form  action="index.html" >
+          <img src="images/avatar.svg" class="avatar">
+          <h2>Welcome</h2>
+
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div >
+              <h5>Username</h5>
+              <input type="text" class="input">
+
+            </div>
+          </div>
+
+          <div class="input-div two">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div >
+
+              <h5>Password</h5>
+              <input type="password" class="input">
+
+            </div>
+          </div>
+          <a href="#">Forget password</a>
+          <input type="submit" class="btn" value="login">
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" scr="js/main.js" charset="utf-8" >
+      const inputs= document.querySelectorAll('.input');
+function focusFunc(){
+  let parent= this.parentNode.parentNode;
+  parent.classList.add('focus');
+}
+function blurFunc(){
+  let parent= this.parentNode.parentNode;
+  if (this.value=="") {
+    parent.classList.remove('focus');
+  }
+}
+
+inputs.forEach(input => {
+  input.addEventListener('focus',focusFunc);
+  input.addEventListener('blur',blurFunc);
+
+});
+    </script>
+  </body>
+</html>
